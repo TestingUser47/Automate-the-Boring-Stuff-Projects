@@ -1,0 +1,32 @@
+print ('Enter TB or GB for the advertised unitt;')
+unit = (input('>'))
+
+# float() is used for user input since we need to perform mathematical calculations
+
+# Check if it contains only letters AND is either TB or GB (any case combination)
+if unit.isalpha() and unit.lower() in ['tb', 'gb']:
+    print("Thank you")
+else:
+    print("Please enter TB or GB only")
+    exit() # This stops the entire program if the input is invalid
+
+#Calculate the amount that the advertised capacity lies:
+if unit == 'TB' or unit == 'tb':
+    discrepancy = 1e12 / 1099511627776 # # 1 TB = 1,000,000,000,000 bytes (can be written as 1e12 in scientific notation)
+elif unit == 'GB' or unit == 'gb':# 1 GB = 1,000,000,000 bytes (can be written as 1e9 in scientific notation)
+    discrepancy = 1e9 / 1073741824
+
+# Scientific notation helps handle large numbers in a shorter, cleaner way
+
+print ('Enter the advertised capacity of the drive:')
+advertised_capacity = float (input('>'))
+advertised_capacity = float (advertised_capacity)
+
+# Calculate the actual capacity, rounded to the nearest hundreths,
+# convert it to a string so it can be conctatenated 
+real_capacity = str (round (advertised_capacity * discrepancy, 2))
+
+print ('The actual capacity is ' + real_capacity + ' ' + unit + '.')
+
+
+# Asks users to enter what unite the hard driver advertises itself for either TB or GB
