@@ -22,25 +22,30 @@ The keyword Break, stops the loop early, causing the loop to exit.
 
 **Example**
 
+
+''' python
 while True:
     print('What is your name?')
     Name = input('>')
 
     if Name == '': 
-        print ('You added nothing.')
-        break
+        print('You added nothing.')
+        print('Please enter alphabetical letters only')
+        # No break here - continues the loop to ask again
     elif Name.isalpha():
-            print("Thank you!")
-            break
+        print("Thank you!")
+        break  # Exit after valid input
     else: 
-            print ("Please enter alphabetical letters only")
-            exit()
+        print("Please enter alphabetical letters only")
+        # No break here either - continues the loop
 
-print ('Goodbye!')
+print('Goodbye! ' + Name) 
 
-- This code asks the user for their name and checks if the input is valid (only alphabetical letters). If the input is empty, it prompts again. If the input contains non-alphabetical characters, it exits the program.
+'''
 
-# While Loop Flow Diagram
+- This code snippet demonstrates a while loop that continues to prompt the user for their name until they provide a valid alphabetical input. It handles empty inputs and non-alphabetical characters by providing appropriate feedback and re-prompting the user.
+
+# While Break Flow Diagram
 
 
 ```mermaid
@@ -49,23 +54,22 @@ flowchart TD
     B --> C[Get user input: name = input]
     C --> D{Is name empty string ''}
     D -->|Yes| E[Print 'You added nothing']
-    E --> F[BREAK - Exit loop]
-    F --> K[Print 'Goodbye!']
-    K --> L[END]
+    E --> F[Print 'Please enter alphabetical letters only']
+    F --> M[Continue loop]
+    M --> B
     
     D -->|No| G{Is name.isalpha true?}
     G -->|Yes| H[Print 'Thank you!']
     H --> I[BREAK - Exit loop]
-    I --> K
+    I --> K[Print 'Goodbye!' + name]
+    K --> L[END]
     
     G -->|No| J[Print 'Please enter alphabetical letters only']
-    J --> M[Continue loop]
-    M --> B
+    J --> M
     
-    style A fill:#90EE90,color:#FFFFFF
-    style L fill:#FFB6C1,color:#FFFFFF
-    style F fill:#FF6B35,color:#FFFFFF
+    style A fill:#FF6B35,color:#FFFFFF
+    style L fill:#FF6B35,color:#FFFFFF
     style I fill:#FF6B35,color:#FFFFFF
-    style M fill:#87CEEB,color:#FFFFFF
+    style M fill:#FF6B35,color:#FFFFFF
 ```
 
