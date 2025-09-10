@@ -1,0 +1,11 @@
+# While Loop Example
+
+X = 2 
+while X < 3:
+    print('X is ' + str(X) + ' which is less than 3 for the while statement X < 3.')
+    X = X + 2 
+    if X > 3:
+        print('X = X + 2, X is now greater than 3 with the result being ' + str(X))
+
+# You need to use str() to concatenate a string within a number, something I later found out through error.
+

@@ -1,0 +1,16 @@
+while True:
+    print('What is your name?')
+    Name = input('>')
+
+    if Name == '': 
+        print ('You added nothing.')
+        break
+    elif Name.isalpha():
+            print("Thank you!")
+            break
+    else: 
+            print ("Please enter alphabetical letters only")
+            exit()
+
+print ('Goodbye!')
+# This code asks the user for their name and checks if the input is valid (only alphabetical letters). If the input is empty, it prompts again. If the input contains non-alphabetical characters, it exits the program.
