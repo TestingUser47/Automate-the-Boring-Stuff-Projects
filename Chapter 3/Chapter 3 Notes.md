@@ -6,12 +6,14 @@
 - You can add if statements inside or after while loops to handle different conditions.
 - Remember to use str() when concatenating numbers with strings.
 
+```python
 X = 2 
 while X < 3:
     print('X is ' + str(X) + ' which is less than 3 for the while statement X < 3.')
     X = X + 2 
     if X > 3:
         print('X = X + 2, X is now greater than 3 with the result being ' + str(X))
+``` 
 
 In this example X = 2, while 2  < 3 print the string X with the rest of the comment. From there I did X = X + 2 which means 2 + 2 = 4. If 4 > 3 print the second statement. This example was documented under **While Loop Example**. 
 
