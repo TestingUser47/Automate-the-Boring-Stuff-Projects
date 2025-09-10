@@ -23,7 +23,7 @@ The keyword Break, stops the loop early, causing the loop to exit.
 **Example**
 
 
-''' python
+```python
 while True:
     print('What is your name?')
     Name = input('>')
@@ -41,7 +41,7 @@ while True:
 
 print('Goodbye! ' + Name) 
 
-'''
+``` 
 
 - This code snippet demonstrates a while loop that continues to prompt the user for their name until they provide a valid alphabetical input. It handles empty inputs and non-alphabetical characters by providing appropriate feedback and re-prompting the user.
 
