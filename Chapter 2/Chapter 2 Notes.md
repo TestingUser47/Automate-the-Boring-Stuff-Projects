@@ -10,4 +10,7 @@
 
 ## My code improvements:
 - Added error handling with exit() 
-- Used scientific notation (1e12) for large numbers
+- Used scientific notation (Ex: 1e12, 1e9) for large numbers
+
+
+
